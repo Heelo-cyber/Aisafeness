@@ -60,9 +60,34 @@
           </div>
 
           <div style="margin-top: 18px;">
-            <script
-              type="text/javascript"
-              src="https://form.jotform.com/jsform/260687311405050">
+            <iframe
+              id="JotFormIFrame-260687311405050"
+              title="AI Safety Support"
+              onload="window.parent.scrollTo(0,0)"
+              allowtransparency="true"
+              allowfullscreen="true"
+              allow="geolocation; microphone; camera"
+              src="https://form.jotform.com/260687311405050"
+              frameborder="0"
+              style="min-width:100%; max-width:100%; height:539px; border:none;"
+              scrolling="no"
+            >
+            </iframe>
+            <script type="text/javascript">
+              var ifr = document.getElementById("JotFormIFrame-260687311405050");
+              if (ifr) {
+                var src = ifr.src;
+                var iframeParams = [];
+                if (window.location.href && window.location.href.indexOf("?") > -1) {
+                  iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+                }
+                if (src && src.indexOf("?") > -1) {
+                  iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                  src = src.substr(0, src.indexOf("?"));
+                }
+                iframeParams.push("isIframeEmbed=1");
+                ifr.src = src + "?" + iframeParams.join('&');
+              }
             </script>
           </div>
 
@@ -101,14 +126,11 @@
 
         <div class="hero-actions">
           <a class="btn primary" href="https://www.facebook.com/share/18MsxC4cfZ/?mibextid=wwXIfr" target="_blank" rel="noopener">
-         Open Facebook Group
-         </a>
+            Open Facebook Group
           </a>
         </div>
 
-        <p class="small" style="margin-top: 12px;">
-          Replace the link above with your real Facebook group link.
-        </p>
+        <p class="small" style="margin-top: 12px;"></p>
       </section>
 
       <section class="card" id="faq">
